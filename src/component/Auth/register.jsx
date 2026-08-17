@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import Logo from "../shared/logo";
 import "./Register.css";
-
-const Register = () => {
+function Register() {
 
 
     return (
@@ -9,19 +9,16 @@ const Register = () => {
             <div className="register-card">
 
                 <div className="register-brand">
-                    <svg
-                        className="register-brand-icon"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        width="28"
-                        height="28"
-                    >
-                        <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H9l2 4H8L6 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z" />
-                    </svg>
+                    <div className="logo">
 
-                    <span className="register-brand-name">
-                        CineScope
-                    </span>
+                        <Logo />
+                    </div>
+                    <div>
+
+                        <span className="register-brand-name">
+                            CineScope
+                        </span>
+                    </div>
                 </div>
 
 
@@ -40,7 +37,6 @@ const Register = () => {
                     className="register-form"
 
                 >
-
 
                     <div className="register-field">
                         <label htmlFor="name">
