@@ -1,0 +1,21 @@
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.section-title {
+    color: var(--color-text-primary);
+}
+
+.section-see-all {
+    background: transparent;
+    border: none;
+
+    color: var(--color-accent);
+
+    font-size: var(--font-size-small);
+    cursor: pointer;
+}

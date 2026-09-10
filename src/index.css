@@ -191,7 +191,11 @@ p {
     background-color: var(--color-surface-secondary);
 }
 
-.logo {
-    height: 20px;
-    width: 20px;
+.loading {
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    text-decoration: none;
 }

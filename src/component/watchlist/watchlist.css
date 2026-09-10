@@ -1,0 +1,267 @@
+body {
+    margin: 0;
+
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+
+    font-family: var(--font-family);
+}
+
+.watchlist-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.header {
+    margin-bottom: 32px;
+}
+
+.header h1 {
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-bold);
+    margin: 0 0 6px;
+}
+
+.header p {
+    color: var(--color-text-secondary);
+
+    font-size: var(--font-size-body);
+
+    margin: 0;
+}
+
+
+.movie-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.movie-card {
+    background-color: var(--color-surface);
+
+    border-radius: var(--radius-card);
+
+    overflow: hidden;
+
+    border: 1px solid var(--color-border);
+
+    transition: var(--transition-normal);
+
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--color-text-secondary);
+}
+
+.poster-wrapper {
+    width: 100%;
+
+    aspect-ratio: 2 / 3;
+
+    overflow: hidden;
+
+    background-color: var(--color-surface-secondary);
+}
+
+.poster-wrapper img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+
+.card-info {
+    padding: 12px 14px;
+}
+
+.movie-title {
+    font-size: var(--font-size-body);
+
+    font-weight: var(--font-weight-semibold);
+
+    margin: 0 0 6px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: var(--color-text-primary);
+}
+
+.rating {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    font-size: var(--font-size-small);
+
+    font-weight: var(--font-weight-medium);
+
+    color: var(--color-text-secondary);
+}
+
+.rating .star {
+    color: var(--color-accent);
+}
+
+
+@media (max-width: 1024px) {
+    .movie-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+body {
+    margin: 0;
+
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+
+    font-family: var(--font-family);
+}
+
+.watchlist-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 40px 20px;
+}
+
+.header {
+    margin-bottom: 32px;
+}
+
+.header h1 {
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-bold);
+
+    margin: 0 0 6px;
+}
+
+.header p {
+    color: var(--color-text-secondary);
+
+    font-size: var(--font-size-body);
+
+    margin: 0;
+}
+
+.movie-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.movie-card {
+    background-color: var(--color-surface);
+
+    border-radius: var(--radius-card);
+
+    overflow: hidden;
+
+    border: 1px solid var(--color-border);
+
+    transition: var(--transition-normal);
+
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--color-text-secondary);
+}
+
+
+.poster-wrapper {
+    width: 100%;
+
+    aspect-ratio: 2 / 3;
+
+    overflow: hidden;
+
+    background-color: var(--color-surface-secondary);
+}
+
+.poster-wrapper img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.card-info {
+    padding: 12px 14px;
+}
+
+.movie-title {
+    font-size: var(--font-size-body);
+
+    font-weight: var(--font-weight-semibold);
+
+    margin: 0 0 6px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: var(--color-text-primary);
+}
+
+.rating {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    font-size: var(--font-size-small);
+
+    font-weight: var(--font-weight-medium);
+
+    color: var(--color-text-secondary);
+}
+
+.rating .star {
+    color: var(--color-accent);
+}
+
+@media (max-width: 1024px) {
+    .movie-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+    }
+}

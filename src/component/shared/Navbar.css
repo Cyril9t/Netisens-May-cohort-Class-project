@@ -1,0 +1,91 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background-color: rgba(11, 11, 15, 0.95);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.navbar-container {
+    width: min(1200px, calc(100% - 32px));
+    min-height: 72px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Brand */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-logo {
+    color: var(--color-accent);
+    font-size: 24px;
+}
+
+.navbar-name {
+    color: var(--color-text-primary);
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+}
+
+/* Links */
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navbar-link {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: var(--font-size-body);
+}
+
+.navbar-link:hover {
+    color: var(--color-text-primary);
+}
+
+.navbar-link-active {
+    color: var(--color-accent);
+}
+
+/* Actions */
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-search {
+    background: transparent;
+    border: none;
+    color: var(--color-text-primary);
+    font-size: 18px;
+}
+
+.navbar-profile {
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: var(--color-accent);
+    color: #000;
+
+    font-weight: var(--font-weight-bold);
+}
+
+.nav-logo {
+    padding-top: 20px;
+}

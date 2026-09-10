@@ -10,7 +10,6 @@ function Register() {
 
                 <div className="register-brand">
                     <div className="logo">
-
                         <Logo />
                     </div>
                     <div>
