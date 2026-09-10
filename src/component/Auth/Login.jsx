@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+
+import { Link } from "react-router-dom";
 import Logo from "../shared/logo";
 import "./Register.css";
-import { Link, Navigate, replace, useNavigate } from "react-router-dom";
-function Register() {
+import { useState } from "react";
 
+export default function Login() {
     const [formData, setFormData] = useState({
-        firstName: "",
-        lastName: "",
         email: "",
         password: ""
     })
@@ -19,14 +18,13 @@ function Register() {
         setFormData((prev) => ({ ...prev, [name]: value }))
     }
 
-    {/* https://zyloo-api-v1.onrender.com/auth/login */ }
-    {/* https://zyloo-api-v1.onrender.com/auth/register */ }
-    const navigate = useNavigate()
+
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         setIsLoading(true)
         try {
-            const resp = await fetch("https://zyloo-api-v1.onrender.com/auth/register", {
+            const resp = await fetch("https://zyloo-api-v1.onrender.com/auth/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 credentials: "include",
@@ -36,10 +34,6 @@ function Register() {
             const data = await resp.json()
             console.log(data)
             setIsLoading(false)
-            console.log(resp.ok)
-            if (resp.ok) {
-                navigate("/login", { replace: true })
-            }
         } catch (error) {
             console.log(error)
             setIsLoading(false)
@@ -66,11 +60,11 @@ function Register() {
 
 
                 <div className="register-header">
-                    <h1 className="register-title">
-                        Create an account
+                    <h1 className="register-title login">
+                        Welcome Back
                     </h1>
 
-                    <p className="register-subtitle">
+                    <p className="register-subtitle login">
                         Join CineScope and start your cinematic journey.
                     </p>
                 </div>
@@ -83,38 +77,6 @@ function Register() {
                 >
 
                     <div className="register-field">
-                        <label htmlFor="name">
-                            First Name
-                        </label>
-
-                        <input
-                            className="register-input"
-                            type="text"
-                            placeholder="Enter your full name"
-                            required
-                            name="firstName"
-                            value={formData.firstName}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div className="register-field">
-                        <label htmlFor="name">
-                            Last Name
-                        </label>
-
-                        <input
-                            className="register-input"
-                            type="text"
-                            placeholder="Enter your full name"
-                            required
-                            name="lastName"
-                            value={formData.lastName}
-                            onChange={handleChange}
-                        />
-                    </div>
-
-
-                    <div className="register-field">
                         <label htmlFor="email">
                             Email
                         </label>
@@ -125,7 +87,7 @@ function Register() {
                             placeholder="Enter your email"
                             required
                             name="email"
-                            value={formData.email}
+                            value={formData.name}
                             onChange={handleChange}
                         />
                     </div>
@@ -136,6 +98,7 @@ function Register() {
                             Password
                         </label>
 
+
                         <input
                             className="register-input"
                             type="password"
@@ -145,41 +108,30 @@ function Register() {
                             value={formData.password}
                             onChange={handleChange}
                         />
+
+
                     </div>
 
-
-                    <div className="register-field">
-                        <label htmlFor="confirmPassword">
-                            Confirm Password
-                        </label>
-
-                        <input
-                            className="register-input"
-                            type="password"
-                            placeholder="Confirm your password"
-                            required
-                        />
-                    </div>
 
 
                     <button
                         type="submit"
                         className="register-submit"
                     >
-                        {isLoading ? "Processing" : "Create Account"}
+                        {isLoading ? "Authenticating..." : "Login"}
                     </button>
 
                 </form>
 
 
                 <div className="register-footer">
-                    <span>Already have an account? </span>
+                    <span>Don't have an account? </span>
 
                     <Link
-                        to="/login"
+                        to="/register"
                         className="register-login-link"
                     >
-                        Sign In
+                        Sign Up
                     </Link>
                 </div>
 
@@ -188,4 +140,3 @@ function Register() {
     );
 };
 
-export default Register;

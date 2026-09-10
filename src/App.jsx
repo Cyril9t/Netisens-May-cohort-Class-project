@@ -1,3 +1,4 @@
+import Login from "./component/Auth/Login"
 import Register from "./component/Auth/register"
 import Watchlist from "./component/watchlist/watchlist"
 import Home from "./Pages/Home/Home"
@@ -11,6 +12,8 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/:id/:id" element={<MovieDetail />} />
       <Route path="/Watchlist" element={<Watchlist />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
     </Routes>
   )
 }
