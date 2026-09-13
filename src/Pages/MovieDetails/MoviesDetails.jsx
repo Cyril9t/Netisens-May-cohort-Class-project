@@ -113,8 +113,7 @@ export default function MovieDetail() {
                                 <button className="btn btn-secondary">▶ Watch Trailer</button>
                             </div>
 
-                            {/* https://zyloo-api-v1.onrender.com/auth/login */}
-                            {/* https://zyloo-api-v1.onrender.com/auth/register */}
+                           
                             <div className="section-title">Overview</div>
 
                             <div className="overview-grid">

@@ -13,7 +13,7 @@ const Navbar = () => {
 
                     </div>
                     <span className="navbar-name">CineScope</span>
-                </div>
+                    </div>
 
                 <div className="navbar-links">
                     <Link to="/" className="navbar-link navbar-link-active">
